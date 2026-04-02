@@ -1,0 +1,349 @@
+/* Global Styles for Mesrop Arcade */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Navigation bar */
+header {
+  background-color: #111;
+  border-bottom: 1px solid #222;
+}
+
+nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a07eff; /* neon accent */
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #a07eff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* Containers */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Hero section on home page */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: #a07eff;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #cccccc;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #a07eff;
+  color: #0a0a0a;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: #c29aff;
+  transform: translateY(-2px);
+}
+
+/* Games grid */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(160, 126, 255, 0.3);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #a07eff;
+}
+
+.card p {
+  color: #bbbbbb;
+  font-size: 0.9em;
+}
+
+.card .button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 0.85em;
+}
+
+/* Memory game styles */
+.memory-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-gap: 15px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.memory-card {
+  width: 80px;
+  height: 80px;
+  perspective: 600px;
+  position: relative;
+}
+
+.memory-card .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.memory-card.flip .inner {
+  transform: rotateY(180deg);
+}
+
+.memory-card .front,
+.memory-card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 8px;
+}
+
+.memory-card .front {
+  background-color: #222;
+  color: #a07eff;
+  transform: rotateY(180deg);
+}
+
+.memory-card .back {
+  background-color: #444;
+}
+
+/* Quiz game styles */
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quiz-container h2 {
+  margin-bottom: 20px;
+  color: #a07eff;
+}
+
+.quiz-container .options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz-container button.option {
+  margin: 8px 0;
+  padding: 10px 20px;
+  background-color: #222;
+  color: #a07eff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quiz-container button.option:hover {
+  background-color: #333;
+}
+
+/* Tic-tac-toe styles */
+.tic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.tic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 5px;
+}
+
+.tic-grid .cell {
+  width: 80px;
+  height: 80px;
+  background-color: #222;
+  color: #a07eff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tic-grid .cell:hover {
+  background-color: #333;
+}
+
+.tic-container #status {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+/* Clicker game styles */
+.clicker-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.clicker-container #points {
+  font-size: 2rem;
+  color: #a07eff;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.clicker-container button {
+  padding: 12px 24px;
+  background-color: #222;
+  border: 1px solid #333;
+  color: #a07eff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.clicker-container button:hover {
+  background-color: #333;
+}
+
+/* Reaction game styles */
+.reaction-container {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.reaction-container #message {
+  font-size: 1.6rem;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.reaction-container #startBtn {
+  padding: 12px 24px;
+  background-color: #222;
+  border: 1px solid #333;
+  color: #a07eff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reaction-container #startBtn:hover {
+  background-color: #333;
+}
+
+.reaction-active {
+  background-color: #14213d; /* background when ready to click */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2em;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav li {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  .tic-grid {
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+  }
+  .tic-grid .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  .memory-card {
+    width: 60px;
+    height: 60px;
+  }
+  .clicker-container button {
+    padding: 10px 20px;
+  }
+}
