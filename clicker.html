@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clicker Game | Mesrop Arcade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Mesrop Arcade</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <h1 style="color:#a07eff;text-align:center;">Clicker Game</h1>
+      <p style="text-align:center;color:#bbbbbb;">Click as many times as you can and watch your score go up!</p>
+      <div class="clicker-container">
+        <span id="points">0</span>
+        <button id="clickBtn">Click Me!</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy; <span id="year"></span> Mesrop Arcade. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/clicker.js"></script>
+</body>
+</html>
