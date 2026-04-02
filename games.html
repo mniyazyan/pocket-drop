@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games | Mesrop Arcade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Mesrop Arcade</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 style="color:#a07eff;text-align:center;">Games</h1>
+      <p style="text-align:center;color:#bbbbbb;">Choose a game below to start playing.</p>
+      <div class="games-grid">
+        <div class="card">
+          <h3>Reaction Test</h3>
+          <p>Measure how quickly you can react. Tap as soon as the screen changes!</p>
+          <a href="reaction.html" class="button">Play</a>
+        </div>
+        <div class="card">
+          <h3>Memory Match</h3>
+          <p>Test your memory skills by matching pairs of cards.</p>
+          <a href="memory.html" class="button">Play</a>
+        </div>
+        <div class="card">
+          <h3>Quiz Challenge</h3>
+          <p>How many questions can you answer correctly? Take the quiz and find out.</p>
+          <a href="quiz.html" class="button">Play</a>
+        </div>
+        <div class="card">
+          <h3>Tic-Tac-Toe</h3>
+          <p>Play the classic tic‑tac‑toe against a simple AI opponent.</p>
+          <a href="tictactoe.html" class="button">Play</a>
+        </div>
+        <div class="card">
+          <h3>Clicker Game</h3>
+          <p>Click as fast as you can and watch your score rise!</p>
+          <a href="clicker.html" class="button">Play</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Mesrop Arcade. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
