@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesrop Arcade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Mesrop Arcade</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <h1>Welcome to Mesrop Arcade</h1>
+      <p>Play fun and addictive mini games right in your browser. No sign‑ups, no fuss — just pure gaming fun!</p>
+      <a href="games.html" class="button">Start Playing</a>
+    </section>
+    
+    <div class="container">
+      <h2 style="color:#a07eff;text-align:center;">Why Mesrop Arcade?</h2>
+      <p>Mesrop Arcade is a collection of simple yet engaging games designed to brighten your day. Whether you're killing a few minutes in line or relaxing at home, our games run quickly on desktop or mobile. All games are built with modern web technologies and require no downloads or logins.</p>
+    </div>
+  </main>
+  
+  <footer>
+    &copy; <span id="year"></span> Mesrop Arcade. All rights reserved.
+  </footer>
+  
+  <script>
+    // Update footer year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
